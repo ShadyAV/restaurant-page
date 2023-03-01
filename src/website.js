@@ -63,6 +63,7 @@ function createHeader() {
 }
 
 function initBtns() {
+    const main = document.querySelector("main");
     const menuBtn = document.getElementById("menuBtn");
     const contactBtn = document.getElementById("contactBtn");
     const aboutBtn = document.getElementById("aboutBtn");

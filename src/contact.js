@@ -1,7 +1,8 @@
 import { setupElement } from "./website";
 
 function createContact() {
-    const main = document.getElementById("mainContactUs");
+    const main = document.createElement("div");
+    main.setAttribute("id", "mainContactUs");
 
     const firstSection = document.createElement("section");
     main.appendChild(firstSection);
@@ -24,14 +25,14 @@ function createContact() {
     contactImg.setAttribute("alt", "Pizza Shop");
     contactImg.setAttribute("id", "pizzaShopImg");
     secondSection.appendChild(contactImg);
+
+    return main;
 }
 
 function loadContact() {
     const main = document.querySelector("main");
-    main.setAttribute("id", "");
-    main.setAttribute("id", "mainContactUs");
     main.textContent = "";
-    createContact();
+    main.appendChild(createContact());
 }
 
 export default loadContact;

@@ -27,7 +27,8 @@ function createPizza(title, description, price, img) {
 }
 
 function createMenu() {
-    const main = document.getElementById("mainMenu");
+    const main = document.createElement("div");
+    main.setAttribute("id", "mainMenu");
 
     main.appendChild(createPizza("Sea Pizza", "Salmon with shrimps", "20$", "img/sea_pizza.jpg"));
     main.appendChild(createPizza("Mushroom Pizza", "A taste of several types of mushrooms", "12$",
@@ -40,14 +41,14 @@ function createMenu() {
         "img/meat_pizza.jpg"));
     main.appendChild(createPizza("Super Meat Pizza", "Meat pizza with vegetables", "20$",
         "img/super_meat_pizza.jpg"));
+
+    return main;
 }
 
 function loadMenu() {
     const main = document.querySelector("main");
-    main.setAttribute("id", "");
-    main.setAttribute("id", "mainMenu");
     main.textContent = "";
-    createMenu();
+    main.appendChild(createMenu());
 }
 
 export default loadMenu;
