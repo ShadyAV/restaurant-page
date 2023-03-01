@@ -67,9 +67,26 @@ function initBtns() {
     const contactBtn = document.getElementById("contactBtn");
     const aboutBtn = document.getElementById("aboutBtn");
 
-    menuBtn.onclick = loadMenu;
-    contactBtn.onclick = loadContact;
-    aboutBtn.onclick = loadAbout;
+    menuBtn.style.borderBottom = "2px solid #902923";
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.style.borderBottom = "2px solid #902923";
+        contactBtn.style.borderBottom = "none";
+        aboutBtn.style.borderBottom = "none";
+        loadMenu();
+    });
+    contactBtn.addEventListener("click", () => {
+        menuBtn.style.borderBottom = "none";
+        contactBtn.style.borderBottom = "2px solid #902923";
+        aboutBtn.style.borderBottom = "none";
+        loadContact();
+    });
+    aboutBtn.addEventListener("click", () => {
+        menuBtn.style.borderBottom = "none";
+        contactBtn.style.borderBottom = "none";
+        aboutBtn.style.borderBottom = "2px solid #902923";
+        loadAbout();
+    });
 }
 
 function createMain() {
