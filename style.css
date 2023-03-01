@@ -145,8 +145,9 @@ header {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    padding: 36px 0;
     line-height: 32px;
+    padding: 4rem 0;
+    gap: 2rem;
 }
 
 #chiefImg {
@@ -213,13 +214,13 @@ footer {
 }
 
 @media (max-width: 1000px) {
-    main {
+    #mainMenu {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 650px) {
-    main {
+    #mainMenu {
         grid-template-columns: 1fr;
     }
 
@@ -229,7 +230,7 @@ footer {
 }
 
 @media (max-width: 500px) {
-    main {
+    #mainMenu {
         grid-template-columns: 1fr;
     }
 
