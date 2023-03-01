@@ -1,1 +1,3 @@
-console.log("It Works!");
+import createBase from "./website";
+
+createBase();

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Merienda', cursive;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.activeBtn {
+    border-bottom: 2px solid #0a100d;
+}
+
+#content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titleAndIcon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#titleAndIcon>img {
+    box-shadow: 0 0 3px #0a100d;
+    border-radius: 50%;
+}
+
+#titleAndNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+nav>button {
+    outline: none;
+    border: none;
+    background-color: #b9baa3;
+    font-size: 1.2rem;
+}
+
+nav>button:hover {
+    cursor: pointer;
+}
+
+#accountBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#accountBlock>img {
+    box-shadow: 0 0 3px #0a100d;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 42px;
+    width: 42px;
+}
+
+#accountBlock>img:hover {
+    cursor: pointer;
+}
+
+#accAndBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    line-height: 36px;
+}
+
+#accAndBtn>button {
+    height: 36px;
+    width: 96px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: #902923;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 3px #0a100d;
+    font-size: 1rem;
+}
+
+#accAndBtn>button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#accAndBtn>button:active {
+    opacity: 1;
+}
+
+header {
+    display: flex;
+    padding: 2rem 0;
+    min-width: 100%;
+    background-color: #b9baa3;
+    justify-content: space-evenly;
+    box-shadow: 0 0 3px #0a100d;
+}
+
+#mainMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4rem 0;
+    gap: 2rem;
+    line-height: 32px;
+}
+
+#mainContactUs {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    gap: 2rem;
+    line-height: 32px;
+}
+
+#message {
+    width: 100%;
+}
+
+#pizzaShopImg {
+    margin: 12px 0;
+    padding: 12px;
+    box-shadow: 0 0 3px #0a100d;
+    width: 100%;
+}
+
+#mainAbout {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 36px 0;
+    line-height: 32px;
+}
+
+#chiefImg {
+    width: 100%;
+    box-shadow: 0 0 3px #0a100d;
+    margin: 12px 0;
+    padding: 12px;
+}
+
+.price-and-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-and-select>p {
+    font-size: 1.2rem;
+}
+
+.price-and-select>button {
+    height: 36px;
+    width: 90px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: #a22c29;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 3px #0a100d;
+    font-size: 1rem;
+}
+
+.price-and-select>button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.price-and-select>button:active {
+    opacity: 1;
+}
+
+.pizza-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.pizza-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: #0a100d;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 32px;
+    font-size: 1.2rem;
+    padding: 8px;
+    box-shadow: 0 0 3px #0a100d;
+}
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
