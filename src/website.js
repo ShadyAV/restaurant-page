@@ -1,3 +1,13 @@
+import loadMenu from "./menu";
+import loadContact from "./contact";
+import loadAbout from "./about";
+
+function setupElement(type, text) {
+    const element = document.createElement(type);
+    element.textContent = text;
+    return element;
+}
+
 function createHeader() {
     const header = document.createElement("header");
 
@@ -22,27 +32,17 @@ function createHeader() {
     headerImg.setAttribute("height", "56");
     titleAndIcon.appendChild(headerImg);
 
-    const h1 = document.createElement("h1");
-    h1.textContent = "The Little Pizza Shop";
-    titleAndIcon.appendChild(h1);
+    titleAndIcon.appendChild(setupElement("h1", "The Little Pizza Shop"));
 
-    const menuBtn = document.createElement("button");
-    const contactBtn = document.createElement("button");
-    const aboutBtn = document.createElement("button");
-    menuBtn.textContent = "Menu";
-    contactBtn.textContent = "Contact Us";
-    aboutBtn.textContent = "About";
-    nav.appendChild(menuBtn);
-    nav.appendChild(contactBtn);
-    nav.appendChild(aboutBtn);
+    nav.appendChild(setupElement("button", "Menu"));
+    nav.appendChild(setupElement("button", "Contact Us"));
+    nav.appendChild(setupElement("button", "About"));
 
     const accBlock = document.createElement("div");
     accBlock.setAttribute("id", "accountBlock");
     accAndBtn.appendChild(accBlock);
 
-    const cartBtn = document.createElement("button");
-    cartBtn.textContent = "Cart";
-    accAndBtn.appendChild(cartBtn);
+    accAndBtn.appendChild(setupElement("button", "Cart"));
 
     const userImg = document.createElement("img");
     userImg.setAttribute("src", "img/user-icon.png");
@@ -50,17 +50,36 @@ function createHeader() {
     userImg.setAttribute("height", "32");
     accBlock.appendChild(userImg);
 
-    const accPar = document.createElement("p");
-    accPar.textContent = "Account";
-    accBlock.appendChild(accPar);
+    accBlock.appendChild(setupElement("p", "Account"));
 
     return header;
+}
+
+function initBtns() {
+
+}
+
+function createMain() {
+    const main = document.createElement("main");
+    return main;
+}
+
+function createFooter() {
+    const footer = document.createElement("footer");
+    footer.appendChild(setupElement("p", "© avshady 2023"));
+    return footer;
 }
 
 function createBase() {
     const content = document.getElementById("content");
 
     content.appendChild(createHeader());
+    content.appendChild(createMain());
+    content.appendChild(createFooter());
+    //initBtns();
+
+    loadMenu();
 }
 
 export default createBase;
+export { setupElement };
