@@ -5,7 +5,7 @@ function createPizza(title, description, price, img) {
     pizzaBlock.classList.add("pizza-block");
 
     const pizzaHeader = document.createElement("div");
-    pizzaBlock.classList.add("pizza-header");
+    pizzaHeader.classList.add("pizza-header");
     pizzaBlock.appendChild(pizzaHeader);
 
     const pizzaFooter = document.createElement("div");
