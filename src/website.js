@@ -34,9 +34,16 @@ function createHeader() {
 
     titleAndIcon.appendChild(setupElement("h1", "The Little Pizza Shop"));
 
-    nav.appendChild(setupElement("button", "Menu"));
-    nav.appendChild(setupElement("button", "Contact Us"));
-    nav.appendChild(setupElement("button", "About"));
+    const menuBtn = setupElement("button", "Menu");
+    const contactBtn = setupElement("button", "Contact Us");
+    const aboutBtn = setupElement("button", "About");
+    menuBtn.setAttribute("id", "menuBtn");
+    contactBtn.setAttribute("id", "contactBtn");
+    aboutBtn.setAttribute("id", "aboutBtn");
+
+    nav.appendChild(menuBtn);
+    nav.appendChild(contactBtn);
+    nav.appendChild(aboutBtn);
 
     const accBlock = document.createElement("div");
     accBlock.setAttribute("id", "accountBlock");
@@ -56,7 +63,13 @@ function createHeader() {
 }
 
 function initBtns() {
+    const menuBtn = document.getElementById("menuBtn");
+    const contactBtn = document.getElementById("contactBtn");
+    const aboutBtn = document.getElementById("aboutBtn");
 
+    menuBtn.onclick = loadMenu;
+    contactBtn.onclick = loadContact;
+    aboutBtn.onclick = loadAbout;
 }
 
 function createMain() {
@@ -76,7 +89,7 @@ function createBase() {
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
-    //initBtns();
+    initBtns();
 
     loadMenu();
 }

@@ -12,12 +12,9 @@ function createContact() {
     firstSection.appendChild(setupElement("h2", "Our Location"));
 
     const address = document.createElement("address");
-    const telLink = document.createElement("a");
-    telLink.setAttribute("href", "tel:+5555555555");
-    telLink.textContent = "555-555-5555";
-    address.textContent = "555 Pizza Temptation Lane, Suite T" + document.createElement("br")
-        + "Kansas City, MO 55555-5555" + document.createElement("br") + document.createElement("br")
-        + "Phone:" + telLink;
+    address.appendChild(setupElement("p", "555 Pizza Temptation Lane, Suite T"));
+    address.appendChild(setupElement("p", "Kansas City, MO 55555-5555"));
+    address.appendChild(setupElement("p", "Phone: + 555-555-5555"));
     firstSection.appendChild(address);
 
     secondSection.appendChild(setupElement("h2", "We would be happy to see you!"));
