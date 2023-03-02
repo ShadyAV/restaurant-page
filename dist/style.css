@@ -115,6 +115,10 @@ header {
     box-shadow: 0 0 3px #0a100d;
 }
 
+main {
+    height: 850px;
+}
+
 #mainMenu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -216,6 +220,7 @@ footer {
     padding: 8px;
     box-shadow: 0 0 3px #0a100d;
 }
+
 
 @media (max-width: 1000px) {
     #mainMenu {
